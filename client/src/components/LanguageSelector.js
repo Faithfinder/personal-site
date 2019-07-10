@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { changeLanguage } from "../actions";
 import languages from "../i18n/languages";
-import translate from "../i18n/translate";
 import { Flag, Dropdown } from "semantic-ui-react";
 
 class LanguageSelector extends Component {
