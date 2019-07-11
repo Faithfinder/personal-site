@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import LanguageSelector from "./LanguageSelector";
 import translate from "../../i18n/translate";
+import "./Header.css";
 
 const Header = ({ strings }) => {
   return (
