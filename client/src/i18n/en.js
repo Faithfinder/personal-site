@@ -1,5 +1,8 @@
 export default {
   Header: {
-    someText: "This is header"
+    menuAboutMe: "About Me",
+    menuExperience: "Experience",
+    menuPortfolio: "Portfolio",
+    menuContacts: "Contacts"
   }
 };

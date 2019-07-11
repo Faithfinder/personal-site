@@ -1,5 +1,8 @@
 export default {
   Header: {
-    someText: "Это шапка сайта"
+    menuAboutMe: "Обо мне",
+    menuExperience: "Опыт работы",
+    menuPortfolio: "Портфолио",
+    menuContacts: "Контакты"
   }
 };

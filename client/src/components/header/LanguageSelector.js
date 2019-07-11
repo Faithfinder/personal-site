@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { changeLanguage } from "../actions";
-import languages from "../i18n/languages";
+import { changeLanguage } from "../../actions";
+import languages from "../../i18n/languages";
 import { Flag, Dropdown } from "semantic-ui-react";
 
 class LanguageSelector extends Component {
@@ -15,7 +15,6 @@ class LanguageSelector extends Component {
         key={language.value}
         active={languages[this.props.currentLanguage].value === language.value}
         onClick={() => this.onClick(language)}
-        fluid
       >
         <Flag name={language.iso}></Flag>
         <span className="text">{language.name}</span>
@@ -33,9 +32,7 @@ class LanguageSelector extends Component {
   render() {
     return (
       <Dropdown
-        text={<Flag name={languages[this.props.currentLanguage].iso}></Flag>}
-        button
-        floating
+        trigger={<Flag name={languages[this.props.currentLanguage].iso}></Flag>}
       >
         <Dropdown.Menu>{this.renderList()}</Dropdown.Menu>
       </Dropdown>
