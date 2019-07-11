@@ -7,6 +7,7 @@ import AboutMe from "./aboutMe/AboutMe";
 import ExperienceList from "./experience/ExperienceList";
 import ProjectList from "./portfolio/ProjectList";
 import Contacts from "./contacts/Contacts";
+import paths from "./header/paths";
 
 const App = () => {
   return (
@@ -14,10 +15,10 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
-          <Route path="/" exact component={AboutMe}></Route>
-          <Route path="/experience" exact component={ExperienceList}></Route>
-          <Route path="/portfolio" exact component={ProjectList}></Route>
-          <Route path="/contacts" exact component={Contacts}></Route>
+          <Route path={paths.root} exact component={AboutMe} />
+          <Route path={paths.experience} exact component={ExperienceList} />
+          <Route path={paths.portfolio} exact component={ProjectList} />
+          <Route path={paths.contacts} exact component={Contacts} />
         </Switch>
       </Router>
     </Container>
