@@ -1,29 +1,29 @@
 import React from "react";
 import { Menu, Image } from "semantic-ui-react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import LanguageSelector from "./LanguageSelector";
 import translate from "../../i18n/translate";
 import paths from "./paths";
 import "./Header.css";
 
-const Header = ({ strings }) => {
+const Header = ({ strings, location }) => {
+  const renderLink = (to, label) => {
+    return (
+      <Menu.Item as={Link} to={to} active={location.pathname === to}>
+        {label}
+      </Menu.Item>
+    );
+  };
+
   return (
     <>
       <Image src="https://placekitten.com/640/100" fluid />
       <Menu className="menuTweaked">
-        <Menu.Item as={Link} to={paths.root} className="item">
-          {strings.menuAboutMe}
-        </Menu.Item>
-        <Menu.Item as={Link} to={paths.experience} className="item">
-          {strings.menuExperience}
-        </Menu.Item>
-        <Menu.Item as={Link} to={paths.portfolio} className="item">
-          {strings.menuPortfolio}
-        </Menu.Item>
-        <Menu.Item as={Link} to={paths.contacts} className="item">
-          {strings.menuContacts}
-        </Menu.Item>
+        {renderLink(paths.root, strings.menuAboutMe)}
+        {renderLink(paths.experience, strings.menuExperience)}
+        {renderLink(paths.portfolio, strings.menuPortfolio)}
+        {renderLink(paths.contacts, strings.menuContacts)}
         <Menu.Menu position="right">
           <Menu.Item>
             <LanguageSelector />
@@ -34,4 +34,6 @@ const Header = ({ strings }) => {
   );
 };
 
-export default translate("Header")(Header);
+const traslatedComponent = translate("Header")(Header);
+
+export default withRouter(traslatedComponent);
