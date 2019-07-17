@@ -4,5 +4,8 @@ export default {
     menuExperience: "Experience",
     menuPortfolio: "Portfolio",
     menuContacts: "Contacts"
+  },
+  LanguageSelector: {
+    language: "Language"
   }
 };

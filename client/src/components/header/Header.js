@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Image } from "semantic-ui-react";
+import { Menu, Image, Dropdown } from "semantic-ui-react";
 import { Link, withRouter } from "react-router-dom";
 
 import LanguageSelector from "./LanguageSelector";
@@ -8,11 +8,33 @@ import paths from "./paths";
 import "./Header.css";
 
 const Header = ({ strings, location }) => {
-  const renderLink = (to, label) => {
+  const menuLinks = [
+    { path: paths.root, label: strings.menuAboutMe },
+    { path: paths.experience, label: strings.menuExperience },
+    { path: paths.portfolio, label: strings.menuPortfolio },
+    { path: paths.contacts, label: strings.menuContacts }
+  ];
+
+  const renderLink = ({ path, label }) => {
+    const active = location.pathname === path ? "active" : "";
     return (
-      <Menu.Item as={Link} to={to} active={location.pathname === to}>
+      <Link key={path} className={`item ${active}`} to={path}>
         {label}
-      </Menu.Item>
+      </Link>
+    );
+  };
+
+  const renderMainMenu = () => {
+    return menuLinks.map(link => {
+      return renderLink(link);
+    });
+  };
+
+  const renderRightMenu = renderLabel => {
+    return (
+      <div className="item">
+        <LanguageSelector renderLabel={renderLabel} />
+      </div>
     );
   };
 
@@ -20,14 +42,19 @@ const Header = ({ strings, location }) => {
     <>
       <Image src="https://placekitten.com/640/100" fluid />
       <Menu className="menuTweaked">
-        {renderLink(paths.root, strings.menuAboutMe)}
-        {renderLink(paths.experience, strings.menuExperience)}
-        {renderLink(paths.portfolio, strings.menuPortfolio)}
-        {renderLink(paths.contacts, strings.menuContacts)}
-        <Menu.Menu position="right">
-          <Menu.Item>
-            <LanguageSelector />
-          </Menu.Item>
+        <Menu.Item id="nav-btn">
+          <Dropdown icon={{ name: "content", size: "large" }}>
+            <Dropdown.Menu>
+              {renderMainMenu()}
+              {renderRightMenu(true)}
+            </Dropdown.Menu>
+          </Dropdown>
+        </Menu.Item>
+
+        <Menu.Menu id="menu-left">{renderMainMenu()}</Menu.Menu>
+
+        <Menu.Menu id="menu-right" position="right">
+          {renderRightMenu()}
         </Menu.Menu>
       </Menu>
     </>

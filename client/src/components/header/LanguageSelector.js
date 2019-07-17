@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { changeLanguage } from "../../actions";
 import languages from "../../i18n/languages";
 import { Flag, Dropdown } from "semantic-ui-react";
+import translate from "../../i18n/translate";
 
 class LanguageSelector extends Component {
   onClick = language => {
@@ -29,10 +30,24 @@ class LanguageSelector extends Component {
     });
   };
 
+  renderLabel = () => {
+    const { renderLabel, strings } = this.props;
+    if (renderLabel) {
+      return strings.language;
+    } else {
+      return null;
+    }
+  };
+
   render() {
     return (
       <Dropdown
-        trigger={<Flag name={languages[this.props.currentLanguage].iso}></Flag>}
+        trigger={
+          <>
+            <Flag name={languages[this.props.currentLanguage].iso} />
+            {this.renderLabel()}
+          </>
+        }
       >
         <Dropdown.Menu>{this.renderList()}</Dropdown.Menu>
       </Dropdown>
@@ -44,7 +59,9 @@ const mapStateToProps = state => ({
   currentLanguage: state.currentLanguage
 });
 
+const translatedComponent = translate("LanguageSelector")(LanguageSelector);
+
 export default connect(
   mapStateToProps,
   { changeLanguage }
-)(LanguageSelector);
+)(translatedComponent);
