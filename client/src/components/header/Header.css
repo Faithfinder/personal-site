@@ -2,6 +2,9 @@
     margin-top: 0;
     border-top-left-radius: 0%;
     border-top-right-radius: 0%;
+    position: sticky;
+    top: 0%;
+    z-index: 1000;
 }
 
 @media screen and (max-width: 45em) {
