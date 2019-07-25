@@ -41,17 +41,19 @@ const Header = ({ strings, location }) => {
   return (
     <>
       <Image src="https://placekitten.com/640/100" fluid />
-      <Menu className="menuTweaked">
+      <Menu as="header" className="menuTweaked">
         <Menu.Item id="nav-btn">
           <Dropdown icon={{ name: "content", size: "large" }}>
-            <Dropdown.Menu>
+            <Dropdown.Menu as="nav">
               {renderMainMenu()}
               {renderRightMenu(true)}
             </Dropdown.Menu>
           </Dropdown>
         </Menu.Item>
 
-        <Menu.Menu id="menu-left">{renderMainMenu()}</Menu.Menu>
+        <Menu.Menu as="nav" id="menu-left">
+          {renderMainMenu()}
+        </Menu.Menu>
 
         <Menu.Menu id="menu-right" position="right">
           {renderRightMenu()}
