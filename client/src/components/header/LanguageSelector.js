@@ -44,7 +44,10 @@ class LanguageSelector extends Component {
       <Dropdown
         trigger={
           <>
-            <Flag name={languages[this.props.currentLanguage].iso} />
+            <Flag
+              aria-label={`${this.props.strings.language} - ${languages[this.props.currentLanguage].name}`}
+              name={languages[this.props.currentLanguage].iso}
+            />
             {this.renderLabel()}
           </>
         }
