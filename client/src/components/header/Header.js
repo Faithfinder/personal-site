@@ -1,8 +1,9 @@
 import React from "react";
-import { Menu, Image, Dropdown } from "semantic-ui-react";
+import { Menu, Dropdown } from "semantic-ui-react";
 import { Link, withRouter } from "react-router-dom";
 
 import LanguageSelector from "./LanguageSelector";
+import Logo from "./Logo";
 import translate from "../../i18n/translate";
 import paths from "./paths";
 import "./Header.css";
@@ -40,7 +41,7 @@ const Header = ({ strings, location }) => {
 
   return (
     <>
-      <Image src="https://placekitten.com/640/100" fluid />
+      <Logo />
       <Menu as="header" className="menuTweaked">
         <Menu.Item id="nav-btn">
           <Dropdown icon={{ name: "content", size: "large" }}>

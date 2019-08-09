@@ -1,0 +1,106 @@
+#logo {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    white-space: pre;
+    background-color: #1e1e1e;
+    color: #d4d4c9;
+    padding: 2em 4em;
+    margin: 0;
+    user-select: none;
+    height: 14em;
+}
+
+.jsKeyword {
+    color: #bb86c0;
+}
+
+.jsVariable {
+    color: #9cdcfe;
+}
+
+.jsString {
+    color: #ce723b;
+}
+
+.jsClass {
+    color: #4ec9b0;
+}
+
+.jsKeyword2 {
+    color: #358cd6;
+}
+
+.jsMethod {
+    color: #d7ba6e;
+}
+
+.jsSymbol {
+    color: #707e80;
+}
+
+.hide-for-arrow {
+    animation: hide-for-arrow 7s linear infinite both;
+    margin-left: -4px;
+}
+
+@keyframes hide-for-arrow {
+    0%,
+    40%,
+    100% {
+        letter-spacing: initial;
+        display: initial;
+        opacity: 1;
+    }
+
+    50%,
+    90% {
+        letter-spacing: -0.5em;
+        display: none;
+        opacity: 0;
+    }
+}
+
+.hide-for-class {
+    animation: hide-for-class 7s linear infinite both;
+    margin-left: -4px;
+}
+
+@keyframes hide-for-class {
+    0%,
+    40%,
+    100% {
+        letter-spacing: -0.5em;
+        width: 0;
+        opacity: 0;
+    }
+
+    50%,
+    90% {
+        letter-spacing: initial;
+        width: initial;
+        opacity: 1;
+    }
+}
+
+.swing-out-for-arrow {
+    animation: swing-out-for-arrow 7s linear infinite both;
+}
+
+@keyframes swing-out-for-arrow {
+    0%,
+    40%,
+    100% {
+        transform: rotateX(0deg);
+        transform-origin: top;
+        height: initial;
+        display: inline;
+        opacity: initial;
+    }
+    50%,
+    90% {
+        transform: rotateX(-100deg);
+        transform-origin: top;
+        height: 0;
+        display: none;
+        opacity: 0;
+    }
+}
