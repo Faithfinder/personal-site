@@ -23,9 +23,9 @@ export default () => {
       </span>
       <span className="hide-for-class">
         {"() "}
-        <span className="jsKeyword2">=> </span>
+        <span className="jsKeyword2">=></span>
       </span>
-      {"{"} <br />
+      {" {"} <br />
       <div className="swing-out-for-arrow">
         <span className="jsMethod">{"    render"}</span>
         {"() {"} <br />

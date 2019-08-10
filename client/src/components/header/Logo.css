@@ -6,7 +6,20 @@
     padding: 2em 4em;
     margin: 0;
     user-select: none;
-    height: 14em;
+}
+
+@media screen and (max-width: 45em) {
+    #logo {
+        padding: 1em 2em;
+        height: 12em;
+    }
+}
+
+@media screen and (min-width: 45em) {
+    #logo {
+        padding: 2em 4em;
+        height: 14em;
+    }
 }
 
 .jsKeyword {
@@ -39,7 +52,6 @@
 
 .hide-for-arrow {
     animation: hide-for-arrow 7s linear infinite both;
-    margin-left: -4px;
 }
 
 @keyframes hide-for-arrow {
@@ -61,7 +73,6 @@
 
 .hide-for-class {
     animation: hide-for-class 7s linear infinite both;
-    margin-left: -4px;
 }
 
 @keyframes hide-for-class {
