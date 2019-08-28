@@ -9,9 +9,9 @@ export default () => {
       <span className="hide-for-arrow">
         {", { "}
         <span className="jsVariable">Component</span>
-        {" } "}
+        {" }"}
       </span>
-      <span className="jsKeyword">from</span>
+      <span className="jsKeyword"> from</span>
       <span className="jsString">{' "react"'}</span>
       <br /> <br />
       <span className="jsKeyword">export default </span>
@@ -19,7 +19,7 @@ export default () => {
         <span className="jsKeyword2">class </span>
         <span className="jsClass">Logo </span>
         <span className="jsKeyword2">extends </span>
-        <span className="jsClass">Component </span>
+        <span className="jsClass">Component</span>
       </span>
       <span className="hide-for-class">
         {"() "}

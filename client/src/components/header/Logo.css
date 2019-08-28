@@ -59,15 +59,17 @@
     40%,
     100% {
         letter-spacing: initial;
-        display: initial;
         opacity: 1;
     }
 
     50%,
-    90% {
+    91% {
         letter-spacing: -0.5em;
-        display: none;
         opacity: 0;
+    }
+    51%,
+    90% {
+        letter-spacing: -1em;
     }
 }
 
@@ -78,17 +80,20 @@
 @keyframes hide-for-class {
     0%,
     40%,
-    100% {
-        letter-spacing: -0.5em;
-        width: 0;
+    99% {
+        letter-spacing: -1em;
         opacity: 0;
     }
 
     50%,
     90% {
         letter-spacing: initial;
-        width: initial;
         opacity: 1;
+    }
+
+    41%,
+    100% {
+        letter-spacing: -0.5em;
     }
 }
 
