@@ -1,9 +1,11 @@
 import React from "react";
+import { Segment } from "semantic-ui-react";
+
 import "./Logo.css";
 
 export default () => {
   return (
-    <div id="logo">
+    <Segment attached id="logo">
       <span className="jsKeyword">import</span>
       <span className="jsVariable"> React</span>
       <span className="hide-for-arrow">
@@ -44,6 +46,6 @@ export default () => {
         {"    }"} <br />
       </div>
       {"}"}
-    </div>
+    </Segment>
   );
 };

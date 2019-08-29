@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "semantic-ui-react";
+import { Container, Segment } from "semantic-ui-react";
 import { Router, Route, Switch } from "react-router-dom";
 
 import Header from "./header/Header";
@@ -15,12 +15,14 @@ const App = () => {
     <Container>
       <Router history={history}>
         <Header />
-        <Switch>
-          <Route path={paths.root} exact component={AboutMe} />
-          <Route path={paths.experience} exact component={ExperienceList} />
-          <Route path={paths.portfolio} exact component={ProjectList} />
-          <Route path={paths.contacts} exact component={Contacts} />
-        </Switch>
+        <Segment attached="bottom">
+          <Switch>
+            <Route path={paths.root} exact component={AboutMe} />
+            <Route path={paths.experience} exact component={ExperienceList} />
+            <Route path={paths.portfolio} exact component={ProjectList} />
+            <Route path={paths.contacts} exact component={Contacts} />
+          </Switch>
+        </Segment>
       </Router>
     </Container>
   );

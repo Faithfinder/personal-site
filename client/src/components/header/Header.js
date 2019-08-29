@@ -42,7 +42,7 @@ const Header = ({ strings, location }) => {
   return (
     <>
       <Logo />
-      <Menu as="header" className="menuTweaked">
+      <Menu as="header" attached className="sticky">
         <Menu.Item id="nav-btn">
           <Dropdown icon={{ name: "content", size: "large" }}>
             <Dropdown.Menu as="nav">

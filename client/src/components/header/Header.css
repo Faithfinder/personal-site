@@ -1,7 +1,4 @@
-.ui.menu.menuTweaked {
-    margin-top: 0;
-    border-top-left-radius: 0%;
-    border-top-right-radius: 0%;
+.ui.menu.sticky {    
     position: sticky;
     top: 0%;
     z-index: 1000;
