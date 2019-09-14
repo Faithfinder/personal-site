@@ -10,13 +10,14 @@ import ProjectList from "./portfolio/ProjectList";
 import Contacts from "./contacts/Contacts";
 import paths from "./header/paths";
 import history from "../history";
+import Footer from "./footer/Footer";
 
 const App = () => {
   return (
     <Container>
       <Router history={history}>
         <Header />
-        <Segment attached="bottom">
+        <Segment attached>
           <Switch>
             <Route path={paths.root} exact component={AboutMe} />
             <Route path={paths.experience} exact component={ExperienceList} />
@@ -25,6 +26,7 @@ const App = () => {
           </Switch>
         </Segment>
       </Router>
+      <Footer />
     </Container>
   );
 };

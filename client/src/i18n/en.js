@@ -7,5 +7,8 @@ export default {
   },
   LanguageSelector: {
     language: "Language"
+  },
+  Footer: {
+    footer: "Dmitrii Kartashev © 2019"
   }
 };
