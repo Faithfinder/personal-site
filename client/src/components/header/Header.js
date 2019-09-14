@@ -45,10 +45,7 @@ const Header = ({ strings, location }) => {
       <Menu as="header" attached className="sticky">
         <Menu.Item id="nav-btn">
           <Dropdown icon={{ name: "content", size: "large" }}>
-            <Dropdown.Menu as="nav">
-              {renderMainMenu()}
-              {renderRightMenu(true)}
-            </Dropdown.Menu>
+            <Dropdown.Menu as="nav">{renderMainMenu()}</Dropdown.Menu>
           </Dropdown>
         </Menu.Item>
 
@@ -56,9 +53,7 @@ const Header = ({ strings, location }) => {
           {renderMainMenu()}
         </Menu.Menu>
 
-        <Menu.Menu id="menu-right" position="right">
-          {renderRightMenu()}
-        </Menu.Menu>
+        <Menu.Menu position="right">{renderRightMenu()}</Menu.Menu>
       </Menu>
     </>
   );
