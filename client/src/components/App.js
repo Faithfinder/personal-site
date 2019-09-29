@@ -14,10 +14,10 @@ import Footer from "./footer/Footer";
 
 const App = () => {
   return (
-    <Container>
+    <Container id="main-wrapper">
       <Router history={history}>
         <Header />
-        <Segment attached>
+        <Segment attached id="body">
           <Switch>
             <Route path={paths.root} exact component={AboutMe} />
             <Route path={paths.experience} exact component={ExperienceList} />
@@ -25,8 +25,9 @@ const App = () => {
             <Route path={paths.contacts} exact component={Contacts} />
           </Switch>
         </Segment>
+        <Footer />
       </Router>
-      <Footer />
+      
     </Container>
   );
 };

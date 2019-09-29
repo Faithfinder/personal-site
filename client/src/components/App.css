@@ -1,3 +1,23 @@
 body {
     background-color: #DDD;
 }
+
+/* Making footer appear at the bottom */
+
+#root {
+    height: 100%;
+}
+
+#main-wrapper {
+    display: flex;
+    flex-flow: column;
+    min-height: 100%;
+}
+
+#body {
+    flex-grow: 1;
+}
+
+#footer {
+    margin-bottom: 1em;
+}

@@ -4,7 +4,7 @@ import translate from "../../i18n/translate";
 
 const Footer = ({ strings }) => {
   return (
-    <Segment basic inverted attached="bottom" textAlign="center" size="mini">
+    <Segment basic inverted attached="bottom" textAlign="center" size="mini" id="footer">
       {strings.footer}
     </Segment>
   );
