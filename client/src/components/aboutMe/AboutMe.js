@@ -9,6 +9,7 @@ const AboutMe = ({ strings }) => {
   return (
     <Segment basic>
       <Grid stackable verticalAlign="middle" columns="equal">
+      <Grid.Column width={3} />
         <Grid.Column width={3}>
           <Image src="me.jpg" rounded size="medium" centered />
         </Grid.Column>
@@ -23,6 +24,7 @@ const AboutMe = ({ strings }) => {
           {". " + strings.introEnd + " "}
           <Link to={paths.contacts}>{strings.getInTouch}</Link>
         </Grid.Column>
+        <Grid.Column width={3} />
       </Grid>
       <Divider />
       <Image.Group size="tiny">
