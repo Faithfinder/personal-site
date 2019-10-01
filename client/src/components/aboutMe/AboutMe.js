@@ -27,6 +27,28 @@ const AboutMe = ({ strings }) => {
         <Grid.Column width={3} />
       </Grid>
       <Divider />
+      <pre>{`
+        Frontend:
+          HTML
+          CSS
+          JS
+          React
+          Redux
+        Backend:
+          Node
+          C#
+          Python
+        Data-transfer:
+          XML
+          SOAP
+          JSON
+          REST
+        Database:
+          PostgreSQL
+          MSSQL
+          MongoDB
+        
+        `}</pre>
       <Image.Group size="tiny">
         <Image
           src="tool-icons\VSC.svg"
