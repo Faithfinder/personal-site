@@ -5,7 +5,7 @@ import languages from "../../i18n/languages";
 import { Flag, Dropdown } from "semantic-ui-react";
 import translate from "../../i18n/translate";
 
-function LanguageSelector({shouldRenderLabel, strings}) {
+const LanguageSelector = ({shouldRenderLabel, strings}) => {
 
   const dispatch = useDispatch();
   const currentLanguage = useSelector(state => state.currentLanguage);
@@ -57,8 +57,7 @@ function LanguageSelector({shouldRenderLabel, strings}) {
     >
       <Dropdown.Menu>{renderList()}</Dropdown.Menu>
     </Dropdown>
-  );
-  
+  );  
 }
 
 export default translate("LanguageSelector")(LanguageSelector);

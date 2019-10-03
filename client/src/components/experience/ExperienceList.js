@@ -7,7 +7,7 @@ import translate from "../../i18n/translate";
 import momentLocale from "../../i18n/moment";
 import { fetchPositions } from "../../actions";
 
-function ExperienceList() {
+const ExperienceList = () => {
 
   const dispatch = useDispatch();
   const [positions, currentLanguage] = useSelector(state => [state.positions, state.currentLanguage]);
