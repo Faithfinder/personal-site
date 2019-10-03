@@ -34,7 +34,7 @@ const Header = ({ strings, location }) => {
   const renderRightMenu = renderLabel => {
     return (
       <div className="item">
-        <LanguageSelector renderLabel={renderLabel} />
+        <LanguageSelector shouldRenderLabel={renderLabel} />
       </div>
     );
   };
