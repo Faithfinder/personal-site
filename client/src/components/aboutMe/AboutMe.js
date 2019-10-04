@@ -47,6 +47,8 @@ const AboutMe = ({ strings }) => {
           PostgreSQL
           MSSQL
           MongoDB
+        CI/CD:
+          Jenkins
         
         `}</pre>
       <Image.Group size="tiny">
